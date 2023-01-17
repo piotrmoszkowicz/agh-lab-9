@@ -32,12 +32,13 @@ For now the responses are fixed. Don't worry we will fix that in upcoming exerci
 
 # Exercise 1 - Add XRay tracing
 
-1. Look for comments in Code starting with "EX1". Fill them with instruction.
-2. Regularly use `cdk deploy --all` after changes you make and want to push into the cloud.
-3. When it works, do some requests to your API:
+1. Install `2.60.0` version of `aws-cdk` with `npm i -g aws-cdk@2.6.0 --force`.
+2. Look for comments in Code starting with "EX1". Fill them with instruction.
+3. Regularly use `cdk deploy --all` after changes you make and want to push into the cloud.
+4. When it works, do some requests to your API:
    1. Creating video: `curl -i -X POST https://<YOUR GW ID>.execute-api.us-east-1.amazonaws.com/prod/videos -d '{"id": "dQw4w9WgXcQ", "title": "Rick Astley - Never Gonna Give You Up (Official Music Video)"}'`.
    2. Getting videos: `curl -i https://<YOUR GW ID>.execute-api.us-east-1.amazonaws.com/prod/videos`.
-4. After you finish show your tutor, that there are existing traces in AWS X-Ray (it is part of AWS CloudWatch) and you can see logs with AWS Cloudwatch Logs.
+5. After you finish show your tutor, that there are existing traces in AWS X-Ray (it is part of AWS CloudWatch) and you can see logs with AWS Cloudwatch Logs.
 
 # Exercise 2 - Add alarm
 
