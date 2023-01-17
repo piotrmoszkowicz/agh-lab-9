@@ -26,7 +26,7 @@ export class FakeTubeApiStack extends Stack {
     this.handler = new nodejsLambda.NodejsFunction(this, "VideoHandler", {
       runtime: lambda.Runtime.NODEJS_14_X,
       entry: 'resources/videos.ts',
-      role: iam.Role.fromRoleName(this, "LabRole", "LabRole"),
+      role: iam.Role.fromRoleName(this, "LabRole", "LabRole", { mutable: false }),
       environment: {
         VIDEOS_TABLE_NAME: props.table.tableName
       },
